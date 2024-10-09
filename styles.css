@@ -1,0 +1,124 @@
+/* Basic reset and font settings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: block;
+}
+
+nav ul li a:hover {
+    background-color: #444;
+}
+
+/* Hero section with background image */
+.hero {
+    height: 100vh;
+    background: url('../images/hero-bg.jpg') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-text {
+    color: white;
+    text-align: center;
+    animation: fadeIn 3s;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Character section */
+.characters {
+    padding: 50px;
+}
+
+.character-card {
+    position: relative;
+    width: 200px;
+    overflow: hidden;
+}
+
+.character-card img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.character-card:hover img {
+    transform: scale(1.1);
+}
+
+.hover-details {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.character-card:hover .hover-details {
+    opacity: 1;
+}
+
+/* Carousel */
+.carousel {
+    padding: 50px;
+    background-color: #f5f5f5;
+}
+
+.carousel-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.carousel-item {
+    min-width: 300px;
+}
+
+/* Call-to-action */
+.cta {
+    text-align: center;
+    padding: 30px;
+}
+
+.cta button {
+    background-color: #ff6347;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta button:hover {
+    background-color: #ff4500;
+}
